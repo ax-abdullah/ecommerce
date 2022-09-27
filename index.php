@@ -24,7 +24,7 @@
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-4 mb-lg-0">
                     <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
@@ -152,7 +152,7 @@
         </aside>
         <section class="col-md-10">
             <div class="row">
-                <div class="col-md-4 mb-2">
+                <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="./images/logo/logo.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -164,7 +164,7 @@
                     </div>
                 </div>
                 <!--  -->
-                <div class="col-md-4 mb-2">
+                <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="./images/products/apple.jpg" class="card-img-top" alt="Product">
                         <div class="card-body">
@@ -176,7 +176,7 @@
                     </div>
                 </div>
                 <!--  -->
-                <div class="col-md-4 mb-2">
+                <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="./images/products/peppers.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -189,7 +189,7 @@
                 </div>
                 <!--  -->
                 <!--  -->
-                <div class="col-md-4 mb-2">
+                <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="./images/products/strawberry.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -202,7 +202,7 @@
                 </div>
                 <!--  -->
                 <!--  -->
-                <div class="col-md-4 mb-2">
+                <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="./images/products/dress-1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -215,7 +215,7 @@
                 </div>
                 <!--  -->
                 <!--  -->
-                <div class="col-md-4 mb-2">
+                <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="./images/products/dress-2.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -228,7 +228,7 @@
                 </div>
                 <!--  -->
                 <!--  -->
-                <div class="col-md-4 mb-2">
+                <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="./images/products/dress-3.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -241,7 +241,7 @@
                 </div>
                 <!--  -->
                 <!--  -->
-                <div class="col-md-4 mb-2">
+                <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="./images/products/dress-4.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
