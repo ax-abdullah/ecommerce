@@ -7,6 +7,9 @@
     <title>Admin Dashboard</title>
     <!-- Bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Style link -->
     <link rel="stylesheet" href="../styles/style.css">
 </head>
@@ -20,7 +23,7 @@
                 <nav class="navbar navbar-expand-lg">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="" class="nav-link">xW3lpy-1 come guest</a>
+                            <a href="" class="nav-link">Welcome guest</a>
                         </li>
                     </ul>
                 </nav>
@@ -55,7 +58,7 @@
                             </a>
                     </button>
                     <button>
-                            <a href="#" class="nav-link px-3 py-1 text-light bg-info bg-gradient my-1">
+                            <a href="index.php?insert_category" class="nav-link px-3 py-1 text-light bg-info bg-gradient my-1">
                                 Insert Categories
                             </a>
                     </button>
@@ -65,7 +68,7 @@
                             </a>
                     </button>
                     <button>
-                            <a href="#" class="nav-link px-3 py-1 text-light bg-info bg-gradient my-1">
+                            <a href="index.php?insert_brand" class="nav-link px-3 py-1 text-light bg-info bg-gradient my-1">
                                 Insert Brands
                             </a>
                     </button>
@@ -98,6 +101,16 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container my-5">
+        <?php 
+            if(isset($_GET['insert_category'])){
+                include('insert_categories.php');
+            }
+            if(isset($_GET['insert_brand'])){
+                include('insert_brand.php');
+            }
+        ?>
     </div>
     <!-- Last child -->
     <footer class="bg-info bg-gradient p-4 text-center footer">
