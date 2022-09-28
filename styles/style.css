@@ -1,3 +1,8 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .logo{
     width: 2.5rem;
     height: 2.5rem;
@@ -10,3 +15,16 @@
 /* .col-md-10 .row .col-md-4{
     padding: 0 1rem;
 } */
+.admin_image{
+    width: 100px;
+    object-fit: contain;
+}
+/* .admin_image > img{
+    width: 100%;
+} */
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
