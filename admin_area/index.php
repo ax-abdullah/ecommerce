@@ -1,3 +1,7 @@
+<?php 
+    include('../includes/connection.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,52 +51,52 @@
                     </p>
                 </div>
                 <div class="button d-flex flex-wrap gap-2">
-                    <button>
+                    <button class="p-0 border-0">
                             <a href="#" class="nav-link px-3 py-1  py-1 text-light bg-info bg-gradient my-1 ">
                                 Insert Products
                             </a>
                     </button>
-                    <button>
+                    <button class="p-0 border-0">
                             <a href="#" class="nav-link px-3 py-1 text-light bg-info bg-gradient my-1">
                                 View Products
                             </a>
                     </button>
-                    <button>
+                    <button class="p-0 border-0">
                             <a href="index.php?insert_category" class="nav-link px-3 py-1 text-light bg-info bg-gradient my-1">
                                 Insert Categories
                             </a>
                     </button>
-                    <button>
+                    <button class="p-0 border-0">
                             <a href="#" class="nav-link px-3 py-1 text-light bg-info bg-gradient my-1">
                                 View Categories
                             </a>
                     </button>
-                    <button>
+                    <button class="p-0 border-0">
                             <a href="index.php?insert_brand" class="nav-link px-3 py-1 text-light bg-info bg-gradient my-1">
                                 Insert Brands
                             </a>
                     </button>
-                    <button>
+                    <button class="p-0 border-0">
                             <a href="#" class="nav-link px-3 py-1 text-light bg-info bg-gradient my-1">
                                 View Brands
                             </a>
                     </button>
-                    <button>
+                    <button class="p-0 border-0">
                             <a href="#" class="nav-link px-3 py-1 text-light bg-info bg-gradient my-1">
                                 All Orders        
                             </a>
                     </button>
-                    <button>
+                    <button class="p-0 border-0">
                             <a href="#" class="nav-link px-3 py-1 text-light bg-info bg-gradient my-1">
                                 All Payments
                             </a>
                     </button>
-                    <button>
+                    <button class="p-0 border-0">
                             <a href="#" class="nav-link px-3 py-1 text-light bg-info bg-gradient my-1">
                                 List Users
                             </a>
                     </button>
-                    <button>
+                    <button class="p-0 border-0">
                             <a href="#" class="nav-link px-3 py-1 text-light bg-info bg-gradient my-1">
                                 Logout
                             </a>
