@@ -19,12 +19,14 @@
         }
     }
 ?>
+<h2 class="text-center mb-3">Insert Brands</h2>
+
 <form action="" method="POST">
     <div class="input-group w-90"> 
         <span class="input-group-text bg-info bg-gradient" id="basic-addon1">
             <i class="fa-solid fa-receipt"></i>
         </span>
-        <input type="text" name="brand_title" class="form-control" placeholder="Insert Brand" aria-label="Brand" aria-describedby="basic-addon1">
+        <input type="text" name="brand_title" class="form-control insert" placeholder="Insert Brand" aria-label="Brand" aria-describedby="basic-addon1">
     </div>
     <div class="input-group w-10 my-3 ">
             <input type="submit" name="insert_brand" class="form-control bg-info text-light bg-gradient" value="Insert Brand" aria-label="Brand" aria-describedby="basic-addon1">

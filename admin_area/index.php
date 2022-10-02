@@ -106,7 +106,7 @@
             </div>
         </div>
     </div>
-    <div class="container my-5">
+    <div class="container my-4">
         <?php 
             if(isset($_GET['insert_category'])){
                 include('insert_categories.php');
@@ -122,5 +122,16 @@
     </footer>
     <!-- Bootstrap js link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <script>
+        // let category = document.querySelector('#insert_cat');
+        // if(category) category.focus();
+        (function focus(){
+            let input = document.querySelector('.insert');
+            input.focus();
+            console.log(input);
+            
+        })();
+    </script>
 </body>
 </html>
