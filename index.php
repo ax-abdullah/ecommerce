@@ -1,3 +1,6 @@
+<?php 
+    include('./includes/connection.php') ;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +15,6 @@
     <!-- Style link -->
     <link rel="stylesheet" href="./styles/style.css">
 </head>
-<>
     <header class="container-fluid p-0">
         <!-- first child  Navigation-->
        <nav class="navbar navbar-expand-lg bg-info bg-gradient">
@@ -81,39 +83,25 @@
 
     <!-- Fourth Child Products and Sidenav -->
     <div class="row m-0">
-        <aside class="col-md-2 bg-secondary bg-gradient p-0">
+        <aside class="col-md-2 bg-secondary bg-gradient p-0 rounded-top">
             <!-- Brands to be displayed -->
-            <ul class="navbar-nav me-auto text-center">
-                <li class="nav-item bg-info bg-gradient mb-1">
+            <ul class="navbar-nav me-auto text-center ">
+                <li class="nav-item bg-info bg-gradient mb-1 rounded-top">
                     <a href="#" class="nav-link text-light">
                         <h4>Delivery Brand</h4>
                     </a>
                 </li>
+
                 <li class="nav-item">
-                    <a href="#" class="nav-link text-light">
-                        Brand1
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-light">
-                        Brand2
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-light">
-                        Brand3
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-light">
-                        Brand4
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-light">
-                        Brand5
-                    </a>
-                </li>
+                    <?php 
+                    $select_brands = "SELECT * FROM `brands`";
+                    $brands_result = mysqli_query($connection, $select_brands);
+                    while($row_data = mysqli_fetch_assoc($brands_result)){
+                        echo '<a href="#" class="nav-link text-light">'
+                               . $row_data["brand_title"].
+                             '</a>' ;
+                    }
+                ?>
             </ul>
 
             <!-- Categories to be displayed -->
@@ -124,30 +112,24 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link text-light">
-                        Category 1
-                    </a>
+                    <?php 
+                        $categories = "SELECT * FROM `categories`";
+                        $categories_result = mysqli_query($connection, $categories);
+                        while($row_data = mysqli_fetch_assoc($categories_result)){
+                            echo '<a href="#" class="nav-link text-light">'
+                                    .$row_data["category_title"].
+                                 '</a>';
+                        }
+                    ?>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-light">
-                        Category 2
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-light">
-                        Category 3
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-light">
-                        Category 4
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-light">
-                        Category 5
-                    </a>
-                </li>
+                <?php 
+                    $categories = "SELECT * FROM `categories`";
+                    $categories_result = mysqli_query($connection, $categories);
+                    for($i = 0; $i < 6; $i++){
+                        $row_data = mysqli_fetch_assoc($categories_result);
+
+                    }
+                ?>
             </ul>
         </aside>
         <section class="col-md-10">
