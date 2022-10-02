@@ -97,7 +97,7 @@
                     $select_brands = "SELECT * FROM `brands`";
                     $brands_result = mysqli_query($connection, $select_brands);
                     while($row_data = mysqli_fetch_assoc($brands_result)){
-                        echo '<a href="#" class="nav-link text-light">'
+                        echo '<a href="index.php?brand_id='.$row_data["brand_id"].'" class="nav-link text-light">'
                                . $row_data["brand_title"].
                              '</a>' ;
                     }
@@ -116,7 +116,7 @@
                         $categories = "SELECT * FROM `categories`";
                         $categories_result = mysqli_query($connection, $categories);
                         while($row_data = mysqli_fetch_assoc($categories_result)){
-                            echo '<a href="#" class="nav-link text-light">'
+                            echo '<a href="index.php?category_id='.$row_data["category_id"].'" class="nav-link text-light">'
                                     .$row_data["category_title"].
                                  '</a>';
                         }
