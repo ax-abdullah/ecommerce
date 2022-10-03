@@ -122,14 +122,6 @@
                         }
                     ?>
                 </li>
-                <?php 
-                    $categories = "SELECT * FROM `categories`";
-                    $categories_result = mysqli_query($connection, $categories);
-                    for($i = 0; $i < 6; $i++){
-                        $row_data = mysqli_fetch_assoc($categories_result);
-
-                    }
-                ?>
             </ul>
         </aside>
         <section class="col-md-10">

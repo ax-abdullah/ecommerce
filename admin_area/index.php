@@ -52,7 +52,7 @@
                 </div>
                 <div class="button d-flex flex-wrap gap-2">
                     <button class="p-0 border-0">
-                            <a href="#" class="nav-link px-3 py-1  py-1 text-light bg-info bg-gradient my-1 ">
+                            <a href="insert_products.php" class="nav-link px-3 py-1  py-1 text-light bg-info bg-gradient my-1 ">
                                 Insert Products
                             </a>
                     </button>
@@ -113,6 +113,9 @@
             }
             if(isset($_GET['insert_brand'])){
                 include('insert_brand.php');
+            }
+            if(isset($_GET['insert_products'])){
+                include('insert_products.php');
             }
         ?>
     </div>
