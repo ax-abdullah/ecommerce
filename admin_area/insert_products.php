@@ -7,6 +7,49 @@
 
     $brands = "SELECT * FROM `brands`";
     $brands_query = mysqli_query($connection, $brands);
+
+    // Insert Products
+
+    if(isset($_POST['insert_product'])){
+        $product_title = $_POST['product_title'];
+        $product_description = $_POST['product_description'];
+        $product_keywords = $_POST['product_keywords'];
+        $product_categories = $_POST['product_categories'];
+        $product_brands = $_POST['product_brands'];
+        $product_image1 = $_FILES['product_image1']['name'];
+        $product_image2 = $_FILES['product_image2']['name'];
+        $product_image3 = $_FILES['product_image3']['name'];
+        $product_price = $_POST['product_price'];
+        $product_status = "true";
+
+        // Image tmp-name
+        $tmp_product_image1 = $_FILES['product_image1']['tmp_name'];
+        $tmp_product_image2 = $_FILES['product_image2']['tmp_name'];
+        $tmp_product_image3 = $_FILES['product_image3']['tmp_name'];
+        // validation
+        // if($product_title == '' or $product_description or $product_keywords  == ''or $product_categories  == ''or $product_brands  == '' or $product_price == ''){
+        //      echo "<script>alert('wtf')</script>";
+        //      header("location: insert_products.php?message=failed");
+        //      exit();
+        // }
+        // else{
+    
+            move_uploaded_file($tmp_product_image1, "./product_images/$product_image1");
+            move_uploaded_file($tmp_product_image2, "./product_images/$product_image2");
+            move_uploaded_file($tmp_product_image3, "./product_images/$product_image3");
+
+            $insert_qurey = "INSERT INTO `products` (product_title, product_description, product_keywords, category_id, brand_id, product_image1, product_image2, product_image3, product_price, status, date) VALUES ('$product_title', '$product_description', '$product_keywords',  '$product_categories', '$product_brands', '$product_image1', '$product_image2', '$product_image3', '$product_price', '$product_status', NOW())";
+
+            $products = mysqli_query($connection, $insert_qurey);
+            if($products){
+                // header("location: insert_products.php?message=success");
+                echo "<script>alert('product has been inserted successfuly')</script>";
+            }
+        // }
+    }
+    // else{
+    //     echo "<script>alert('wtf')</script>";
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -78,7 +121,6 @@
                 <label for="product_image2" class="form-label">Product image 2</label>
                 <input type="file" name="product_image2" id="product_image2" class="form-control" required>
             </div>            
-        </form>
             <!-- image 3 -->
             <div class="form-outline mb-4  col-md-8 col-lg-6 col-sm-10 m-auto">
                 <label for="product_image3" class="form-label">Product image 3</label>
