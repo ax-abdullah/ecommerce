@@ -35,9 +35,10 @@
                     <a class="nav-link" href="#">Total Price:100/-  </a>
                     </li>
                 </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">Search</button>
+                    <form class="d-flex" role="search" action="index.php" method="get">
+                        <input class="form-control me-2" type="search" placeholder="Search" name="search_data" aria-label="Search">
+                        <!-- <button class="btn btn-outline-light" type="submit">Search</button> -->
+                        <input type="submit"  id="search" class="btn btn-outline-light" name="search" value="Search">
                     </form>
                 </div>
             </div>
@@ -101,7 +102,12 @@
         <section class="col-md-10">
             <div class='row'>
                     <?php
-                    get_products();
+                    if(isset($_GET['search_data'])){
+                        searchBar();
+                    }
+                    else{
+                        get_products();
+                    }
                     ?>
                     </div>
         </section>

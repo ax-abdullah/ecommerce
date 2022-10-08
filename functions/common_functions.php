@@ -58,4 +58,34 @@
                  '</a>' ;
         }
     }
+
+    function searchBar(){
+      global $connection;
+      if(isset($_GET['search'])){
+        $data =  $_GET['search_data']; 
+        $query = "SELECT * FROM `products` WHERE product_keywords like '%" .$data. "%'";
+        $keywords_result = mysqli_query($connection, $query);
+        $rows = mysqli_num_rows($keywords_result);
+        if($rows < 1){
+          echo "
+          <div class='col mt-4 fs-1 text-center text-danger'><h2 class='fs-1 text-center text-danger'>Sorry, No results match. No products found.</h2></div>
+          ";
+        }
+        while($products_result = mysqli_fetch_assoc($keywords_result)){
+          echo "
+          <div class='col-md-4 mb-4'>
+            <div class='card'>
+              <img src='./admin_area/product_images/".$products_result["product_image1"]."' class='card-img-top' alt='".$products_result["product_image1"]."'>
+              <div class='card-body'>
+                <h5 class='card-title'>".$products_result['product_title']."</h5>
+                <p class='card-text'>".$products_result['product_description']."</p>
+                <a href='#' class='btn btn-info'> Add to cart</a>
+                <a href='#' class='btn btn-secondary'> View more</a>
+              </div>
+            </div>
+          </div>  
+          ";
+        }
+      }
+    }
 ?>
