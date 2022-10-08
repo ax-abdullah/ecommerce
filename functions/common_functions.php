@@ -10,7 +10,7 @@
             echo "
             <div class='col-md-4 mb-4'>
               <div class='card'>
-                <img src='./admin_area/product_images/".$products_result["product_image1"]."' class='card-img-top' alt='...'>
+                <img src='./admin_area/product_images/".$products_result["product_image1"]."' class='card-img-top' alt='".$products_result["product_image1"]."'>
                 <div class='card-body'>
                  <h5 class='card-title'>".$products_result['product_title']."</h5>
                  <p class='card-text'>".$products_result['product_description']."</p>
@@ -28,7 +28,7 @@
         $select_item = "SELECT * FROM `$database`";
         $item_result = mysqli_query($connection, $select_item);
         while($row_data = mysqli_fetch_assoc($item_result)){
-            echo '<a href="index.php?brand_id='.$row_data["$item"."_id"].'" class="nav-link text-light">'
+            echo '<a href="index.php?'."$item"."_id".'='.$row_data["$item"."_id"].'" class="nav-link text-light">'
                    . $row_data["$item"."_title"].
                  '</a>' ;
         }
