@@ -73,7 +73,7 @@
             <!-- Brands to be displayed -->
             <ul class="navbar-nav me-auto text-center ">
                 <li class="nav-item bg-info bg-gradient mb-1 rounded-top">
-                    <a href="#" class="nav-link text-light">
+                    <a href="index.php" class="nav-link text-light">
                         <h4>Delivery Brand</h4>
                     </a>
                 </li>
@@ -87,7 +87,7 @@
             <!-- Categories to be displayed -->
             <ul class="navbar-nav me-auto text-center">
                 <li class="nav-item bg-info bg-gradient mb-1">
-                    <a href="#" class="nav-link text-light">
+                    <a href="index.php" class="nav-link text-light">
                         <h4>Categories</h4>
                     </a>
                 </li>
