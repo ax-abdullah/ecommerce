@@ -112,5 +112,18 @@
                     </div>
         </section>
     </div>
+    <script>
 
+        document.addEventListener("DOMContentLoaded", function(event) { 
+            let scrollpos = localStorage.getItem('scrollpos');
+            if (scrollpos) {
+                window.scrollTo(0, scrollpos);
+                localStorage.removeItem('scrollpos');
+            }
+        });
+
+        window.onbeforeunload = function(e) {
+            localStorage.setItem('scrollpos', window.scrollY);
+        };
+    </script>
 <?php include('./layout/user/bottom.php'); ?>
