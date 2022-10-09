@@ -14,10 +14,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-4 mb-lg-0">
                     <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
+                    <a class="nav-link" href="views/all_products.php
+                    ">Products</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="#">Register</a>
@@ -74,7 +75,7 @@
             <!-- Brands to be displayed -->
             <ul class="navbar-nav me-auto text-center ">
                 <li class="nav-item bg-info bg-gradient mb-1 rounded-top">
-                    <a href="index.php" class="nav-link text-light">
+                    <a href="#" class="nav-link text-light">
                         <h4>Delivery Brand</h4>
                     </a>
                 </li>
