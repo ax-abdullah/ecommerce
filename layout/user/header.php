@@ -1,7 +1,7 @@
-<!-- <?php 
-    // include('./includes/connection.php');
-    // include('./functions/common_functions.php');
-?> -->
+<?php 
+    include('./includes/connection.php');
+    include('./functions/common_functions.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

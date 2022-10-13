@@ -17,7 +17,7 @@
                     <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="all_products.php
+                    <a class="nav-link" href="views/all_products.php
                     ">Products</a>
                     </li>
                     <li class="nav-item">
@@ -107,7 +107,7 @@
                         searchBar();
                     }
                     else{
-                        get_products();
+                        get_all_products();
                     }
                     ?>
                     </div>
