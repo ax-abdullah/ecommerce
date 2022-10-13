@@ -1,5 +1,7 @@
 <?php 
     include('./layout/user/header.php');
+    include('./functions/common_functions.php');
+    include('./includes/connection.php');
 ?>
     <header class="container-fluid p-0">
         <!-- first child  Navigation-->

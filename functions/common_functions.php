@@ -1,5 +1,5 @@
 <?php 
-    include('./includes/connection.php');
+    // include('./includes/connection.php');
 
     function get_products(){
         global $connection;
